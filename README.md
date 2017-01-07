@@ -1,2 +1,2 @@
 # lua-arduino
-Lua for Arduino Uno R3
+An attempt at making it easy to run Lua on the Arduino Uno R3.
