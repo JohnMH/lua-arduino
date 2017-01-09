@@ -1,3 +1,6 @@
 [submodule "lua"]
 	path = lua
 	url = https://github.com/lua/lua
+[submodule "avr-uart"]
+	path = avr-uart
+	url = https://github.com/andygock/avr-uart

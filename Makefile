@@ -10,6 +10,7 @@ MCU=atmega328p
 F_CPU=16000000UL
 BIN_FORMAT=ihex
 PORT=/dev/ttyACM0
+PART=ATmega328P
 PROTOCOL=arduino
 CFLAGS=-Wall -Os -DF_CPU=$(F_CPU) -mmcu=$(MCU) -Ilua -I. -fdata-sections -ffunction-sections
 LDFLAGS=-Wl,--gc-sections

@@ -82,20 +82,20 @@ static int _lastSeedNumber = 38;//Magic number, how do you like me now?
 
 //Modulus for prng
 #define M 0x7FFFFFFF
- 
+
 unsigned long int prng(){//random number generator; call with 1 <= x <=M-1
 	unsigned long int x = _lastSeedNumber++;
 
 	if(x <= M-1){
 		_lastSeedNumber = 26;//More magic numbers!
 	}
-	
+
 	x = (x >> 16) + ((x << 15) & M)  - (x >> 21) - ((x << 10) & M);
-	
+
 	if(x < 0){
 		x += M;
 	}
-	
+
 	return x;
 }
 
@@ -181,4 +181,4 @@ unsigned long int prng(){//random number generator; call with 1 <= x <=M-1
 #include "luac.c"
 #endif
 
-//#include "main.c"
+#include "main.c"
