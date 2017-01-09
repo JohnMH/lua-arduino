@@ -106,7 +106,7 @@ unsigned long int prng(){//random number generator; call with 1 <= x <=M-1
 #define LUA_C89_NUMBERS
 #define LUA_USE_C89
 
-#include "luaconf.h"
+#include "lua/luaconf.h"
 
 #undef LUA_API
 #define LUA_API
@@ -130,44 +130,44 @@ unsigned long int prng(){//random number generator; call with 1 <= x <=M-1
 
 #define l_signalT int
 
-#include "lapi.c"
-#include "lcode.c"
-#include "lctype.c"
-#include "ldebug.c"
-#include "ldo.c"
-#include "ldump.c"
-#include "lfunc.c"
-#include "lgc.c"
-#include "llex.c"
-#include "lmem.c"
-#include "lobject.c"
-#include "lopcodes.c"
-#include "lparser.c"
-#include "lstate.c"
-#include "lstring.c"
-#include "ltable.c"
-#include "ltm.c"
-#include "lundump.c"
+#include "lua/lapi.c"
+#include "lua/lcode.c"
+#include "lua/lctype.c"
+#include "lua/ldebug.c"
+#include "lua/ldo.c"
+#include "lua/ldump.c"
+#include "lua/lfunc.c"
+#include "lua/lgc.c"
+#include "lua/llex.c"
+#include "lua/lmem.c"
+#include "lua/lobject.c"
+#include "lua/lopcodes.c"
+#include "lua/lparser.c"
+#include "lua/lstate.c"
+#include "lua/lstring.c"
+#include "lua/ltable.c"
+#include "lua/ltm.c"
+#include "lua/lundump.c"
 #define pushclosure pushclosure2
-#include "lvm.c"
-#include "lzio.c"
+#include "lua/lvm.c"
+#include "lua/lzio.c"
 
 //Auxilary lib
-#include "lauxlib.c"
+#include "lua/lauxlib.c"
 
 //Standard lib, not useeded for luac
 #ifndef MAKE_LUAC
-#include "lbaselib.c"
+#include "lua/lbaselib.c"
 //#include "lbitlib.c"
 //#include "lcorolib.c"
-#include "ldblib.c"
+#include "lua/ldblib.c"
 //#include "liolib.c"
-#include "lmathlib.c"
+#include "lua/lmathlib.c"
 //#include "loadlib.c"
 //#include "loslib.c"
-#include "lstrlib.c"
-#include "ltablib.c"
-#include "lutf8lib.c"
+#include "lua/lstrlib.c"
+#include "lua/ltablib.c"
+#include "lua/lutf8lib.c"
 //#include "linit.c"
 #endif
 
@@ -181,4 +181,4 @@ unsigned long int prng(){//random number generator; call with 1 <= x <=M-1
 #include "luac.c"
 #endif
 
-#include "main.c"
+//#include "main.c"
